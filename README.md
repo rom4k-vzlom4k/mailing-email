@@ -3,7 +3,7 @@
 Сервис для планирования и отправки email сообщений по расписанию на Go
 
 ## Статус проекта
-**В разработке** — в данный момент умеет отправлять письма через SMTP (Gmail, Yandex и др.) и хранить очередь в PostgreSQL
+**В разработке** — в данный момент умеет отправлять письма через SMTP (Gmail, Yandex и др.) и хранить очередь в PostgreSQL \
 Планы:
 - Панель управления для просмотра и редактирования очереди писем
 - Логи отправки и повторные попытки при ошибках
@@ -36,7 +36,7 @@ mailing_email/
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/username/mailing_email.git
+git clone https://github.com/rom4k-vzlom4k/mailing_email.git
 cd mailing_email
 ```
 
