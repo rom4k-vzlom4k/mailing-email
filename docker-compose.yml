@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    container_name: mailing_db
+    restart: always
+    environment:
+      POSTGRES_USER: mailing_user
+      POSTGRES_PASSWORD: mailing_pass
+      POSTGRES_DB: mailing_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/migrations:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: mailing_app
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT:-9090}:8080"
+    restart: always
+
+volumes:
+  db_data:

@@ -1,0 +1,13 @@
+# Go
+/bin/
+/obj/
+*.exe
+
+# Docker
+*.env
+db_data/
+*.log
+
+# IDE
+.vscode/
+.idea/
